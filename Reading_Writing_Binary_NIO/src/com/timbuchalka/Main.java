@@ -6,6 +6,8 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,6 +20,18 @@ public class Main {
             int numBytes = binChannel.write(buffer);
             System.out.println("numBytes written was: " + numBytes);
 
+                RandomAccessFile ra = new RandomAccessFile("data.dat", "rwd");
+                FileChannel channel = ra.getChannel();
+                outputBytes[0] = 'a';
+                outputBytes[1] = 'b';
+                buffer.flip(); // If Not Specified, OUTPUT: ablloworld, because we have a problem with read
+                // Because Hello World is what present in the Buffer, How can you change buffer by simple manipulating
+                // the Byte Array. For that Reason, call flip().
+                long numBytesRead = channel.read(buffer);
+                if(buffer.hasArray()) {
+                        System.out.println("byte buffer = " + new String(buffer.array()));
+                }
+
             // 2nd Way
 
             ByteBuffer intBuffer = ByteBuffer.allocate(Integer.BYTES); // specify the size
@@ -27,33 +41,25 @@ public class Main {
             System.out.println("numBytes written was: " + numBytes); // While Writing, it will specify the number of bytes written
 
             intBuffer.flip(); // Go back to First Position
-            intBuffer.putInt(-98765); // Add to Buffer
+            intBuffer.putInt(-98765); // Add to Buffer and move 4 positions
             intBuffer.flip(); // Buffer is pointing at end, go back to first to make a write
             numBytes = binChannel.write(intBuffer); // From first, write it to file
             System.out.println("numBytes written was: " + numBytes);
 
-            RandomAccessFile ra = new RandomAccessFile("data.dat", "rwd");
-            FileChannel channel = ra.getChannel();
-            outputBytes[0] = 'a';
-            outputBytes[1] = 'b';
-            buffer.flip(); // If Not Specified, OUTPUT: ablloworld, because
-            long numBytesRead = channel.read(buffer);
-            if(buffer.hasArray()) {
-                System.out.println("byte buffer = " + new String(buffer.array()));
-            }
+
 
             // Absolute read
 
                 intBuffer.flip(); // Make Buffer point at Beginning
-                numBytesRead = channel.read(intBuffer); //
+                numBytesRead = channel.read(intBuffer);
                 System.out.println(intBuffer.getInt(0)); // No need to go back to First, Index: 0 does it for us
                 intBuffer.flip(); // Since Buffer is Cleared, Go back to First Again
-                numBytesRead = channel.read(intBuffer); // Specify to read from File
+                numBytesRead = channel.read(intBuffer); // Specify to read from Buffer since it got updated
                 System.out.println(intBuffer.getInt(0));
 
 
-            /* Relative read
-
+            /*
+            Relative read
                 intBuffer.flip(); // Get the Buffer to Starting
                 numBytesRead = channel.read(intBuffer); // Initialize the Buffer from Channel, but it is pointing at end
                 intBuffer.flip(); // Since pointing at end, Get back to First
@@ -63,11 +69,11 @@ public class Main {
                 intBuffer.flip(); // Again come back to first pos
                 System.out.println(intBuffer.getInt()); // Get 2nd Value - Buffer Cleared, nothing there in file.
             */
+
             channel.close();
             ra.close();
 
 //            System.out.println("outputBytes = " + new String(outputBytes));
-
 //            RandomAccessFile ra = new RandomAccessFile("data.dat", "rwd");
 //            byte[] b = new byte[outputBytes.length];
 //            ra.read(b);
