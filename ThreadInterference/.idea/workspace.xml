@@ -31,7 +31,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
+            <state relative-caret-position="1113">
               <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -147,7 +147,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SynchronizationMethod_VS_Block" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ThreadPools" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -584,12 +584,12 @@
       <updated>1467082001965</updated>
       <workItem from="1467082003475" duration="981000" />
       <workItem from="1467083091829" duration="335000" />
-      <workItem from="1498074956577" duration="3191000" />
+      <workItem from="1498074956577" duration="3204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4507000" />
+    <option name="totallyTimeSpent" value="4520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2586" height="1546" extended-state="6" />
@@ -604,7 +604,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280303" sideWeight="0.503125" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26210937" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26210937" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -695,7 +695,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
+        <state relative-caret-position="1113">
           <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />

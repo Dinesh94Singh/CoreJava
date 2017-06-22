@@ -2,6 +2,7 @@ package com.timbuchalka;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Random;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
@@ -15,7 +16,19 @@ public class Main {
 	    List<String> buffer = new ArrayList<String>();
         ReentrantLock bufferLock = new ReentrantLock();
 
+        for(Object ob: queue){
+            System.out.println(ob.toString());
+        }
+
         ExecutorService executorService = Executors.newFixedThreadPool(3);
+
+        // optimize and manage thread creation and other thread
+        // executorService will manage, we just need to specify
+        // ThreadPool is manage set of threads, to manage thread creation
+        // it is used to efficiently manage multiple thread.
+
+        // Create own thread pool - But recommended to use ExecutorService provided by JVM
+        // Now only 3 threads are used and limited to be used
 
         MyProducer producer = new MyProducer(buffer, ThreadColor.ANSI_YELLOW, bufferLock);
         MyConsumer consumer1 = new MyConsumer(buffer, ThreadColor.ANSI_PURPLE, bufferLock);
